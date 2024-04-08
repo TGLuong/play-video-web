@@ -26,10 +26,10 @@ function uploadFile(file_index) {
     })
     .then(data => {
         alert('File uploaded successfully, reload windown for see the change of video');
-        window.location.reload();
+        window.open('http://pi.local','_blank');window.setTimeout(function(){this.close();},1000)
     })
     .catch(error => {
         alert('Error uploading file');
-        window.location.reload();
+        window.open('http://pi.local','_blank');window.setTimeout(function(){this.close();},1000)
     });
 }
