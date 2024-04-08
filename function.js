@@ -25,9 +25,11 @@ function uploadFile(file_index) {
         return response.json();
     })
     .then(data => {
-        alert('File uploaded successfully');
+        alert('File uploaded successfully, reload windown for see the change of video');
+        window.location.reload();
     })
     .catch(error => {
         alert('Error uploading file');
+        window.location.reload();
     });
 }
