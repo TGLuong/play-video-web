@@ -16,7 +16,7 @@ function uploadFile(file_index) {
     formData.append('file', file);
 
     loader.style.display = "block";
-    fetch('http://pi.local:5000/api/file', {
+    fetch('http://solantech.local:5000/api/file', {
         method: 'POST',
         body: formData
     })
@@ -33,5 +33,25 @@ function uploadFile(file_index) {
     .catch(error => {
         loader.style.display = "none";
         alert('Error uploading file');
+    });
+}
+
+function deleteFile(file_index) {
+    fetch('http://solantech.local:5000/api/file/' + file_index, {
+        method: 'DELETE',
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to upload file.');
+        }
+        return response.json();
+    })
+    .then(data => {
+        loader.style.display = "none";
+        alert('File Delete successfully');
+    })
+    .catch(error => {
+        loader.style.display = "none";
+        alert('Error Delete file');
     });
 }
