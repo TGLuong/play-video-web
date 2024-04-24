@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <script src="function.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,7 +12,7 @@
     <div>
         <p>Select Video and upload</p>
         <input class="input-file" type="file", id="uploadinput" accept="Video/mp4">
-        <div id="loader" class="loader"></div>
+        <progress id="loader" class="loader" value="0" max="100"></progress>
         <br>
         <button class="button-20" onclick="uploadFile(1)">Upload as video 1</button>
         <button class="button-3" onclick="deleteFile(1)">Delete video 1</button>

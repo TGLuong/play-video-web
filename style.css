@@ -125,12 +125,8 @@ video {
 /* HTML: <div class="loader"></div> */
 .loader {
   display: none;
-  height: 8px;
-  width: 500px;
-  --c:no-repeat linear-gradient(#6100ee 0 0);
-  background: var(--c),var(--c),#d7b8fc;
-  background-size: 60% 100%;
-  animation: l16 3s infinite;
+  height: 20px;
+  width: 700px;
 }
 @keyframes l16 {
   0%   {background-position:-150% 0,-150% 0}
